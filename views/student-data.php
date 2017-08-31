@@ -24,10 +24,10 @@
 					  <thead class="thead-inverse">
 					    <tr>
 					      <th>Post Type</th>
-					      <th># Total Posts</th>
+					      <th># Posts Submitted</th>
 					      <th># Required Posts</th>
-					      <th>Points Earned</th>
-					      <th>Points Available</th>
+<!-- 					      <th>Points Earned</th>
+					      <th>Points Available</th> -->
 					    </tr>
 					  </thead>
 					  <tbody>
@@ -35,29 +35,29 @@
 					      <th scope="row">Daily Art</th>
 					      <td><?php echo $author['dailyArtTotal'];  ?></td>
 					      <td>45</td>
-					      <td><?php echo ($author['dailyArtTotal'] * 1); ?></td>
-					      <td>45</td>
+<!-- 					      <td><?php echo ($author['dailyArtTotal'] * 1); ?></td>
+					      <td>45</td> -->
 					    </tr>
 					    <tr>
 					      <th scope="row">Weekly Posts</th>
 					      <td><?php echo $author['weeklyPostTotal'];  ?></td>
 					      <td>11</td>
-					      <td><?php echo ($author['weeklyPostTotal'] * 3); ?></td>
-					      <td>39</td>
+<!-- 					      <td><?php echo ($author['weeklyPostTotal'] * 3); ?></td>
+					      <td>39</td> -->
 					    </tr>
 					    <tr>
 					      <th scope="row">Making Activity</th>
 					      <td><?php echo $author['makingActivityTotal'];  ?></td>
 					      <td>11</td>
-					      <td><?php echo ($author['makingActivityTotal'] * 5); ?></td>
-					      <td>55</td>
+<!-- 					      <td><?php echo ($author['makingActivityTotal'] * 5); ?></td>
+					      <td>55</td> -->
 					    </tr>
 					    <tr>
 					      <th scope="row">Final Project</th>
 					      <td><?php echo $author['finalProjectTotal'];  ?></td>
 					      <td>1</td>
-					      <td><?php echo ($author['finalProjectTotal'] * 1); ?></td>
-					      <td>46</td>
+<!-- 					      <td><?php echo ($author['finalProjectTotal'] * 1); ?></td>
+					      <td>46</td> -->
 					    </tr>
 					    <tr>
 					      <th scope="row">All Posts</th>
