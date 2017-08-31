@@ -2,8 +2,12 @@
  
 foreach($authors as $author){
 
-	var_dump($author); 
+	
+	if(isset($author['userEmail'])){
 
+		var_dump($author); 
+
+	}
 	echo '<br><br>';  
 
 }

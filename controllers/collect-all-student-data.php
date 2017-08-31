@@ -10,7 +10,7 @@
        foreach ( $the_users as $author ) {
          $authors[$author->user_email] = array(
             'userEmail' => $author->user_email,
-            'posts' => [], 
+            'posts' => [],  
             'dailyArt' => [], 
             'finalProject' => [], 
             'makingActivity' => [], 
@@ -33,19 +33,14 @@
 
          		$author = get_the_author_meta('user_email'); 
 
-         		array_push($authors[$author]['posts'], get_the_title() ); 
-
-         		//We need to get the author email so we know where they go in the hash
-         		//Then we need to loop through the categories each time through the loop the 
-         		//add that post to the right array that stores the different assignment options 
-
-
          		$post_categories = get_the_category(); 
 
          		$new_post = array(
          			'title' => get_the_title(), 
          			'permalink' => get_the_permalink()
          			); 
+
+         		array_push($authors[$author]['posts'], $new_post); 
          		
          		foreach($post_categories as $cat){
          			$name = $cat->to_array()['category_nicename']; 
