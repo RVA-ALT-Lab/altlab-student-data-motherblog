@@ -1,4 +1,4 @@
-<?php if(!is_user_logged_in()): ?>
+<?php if(!is_user_logged_in() ): ?>
 
 <p>You must be logged in to access this functionality</p>
             <?php
@@ -20,8 +20,7 @@
 
                     wp_login_form( $args );
 
-             ?>
-<?php endif; ?>               
+             ?>              
 <?php else: ?>
 
 <div class="container" id="altlab-student-data-motherblog">
@@ -101,3 +100,4 @@
 		</div>
 	</div>
 </div>
+<?php endif; ?>
