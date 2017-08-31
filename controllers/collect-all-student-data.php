@@ -45,7 +45,7 @@
          		$new_post = array(
          			'title' => get_the_title(), 
          			'permalink' => get_the_permalink()
-         			)
+         			); 
          		
          		foreach($post_categories as $cat){
          			$name = $cat->to_array()['category_nicename']; 
