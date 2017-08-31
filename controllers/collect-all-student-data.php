@@ -37,8 +37,9 @@
 
 
          		$post_categories = get_the_category(); 
+         		
          		foreach($post_categories as $cat){
-         			echo $cat['category_nicename']; 
+         			echo $cat->to_array()['category_nicename']; 
          		} 
 
          	}
