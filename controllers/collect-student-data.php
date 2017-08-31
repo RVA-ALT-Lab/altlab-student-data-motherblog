@@ -2,7 +2,7 @@
 	  $authors = [];
       $args = array(
         'blog_id'      => $GLOBALS['blog_id'],
-        'role'         => 'author',
+        'role'         => 'subscriber',
         'orderby' => 'display_name',
 
        ); 
