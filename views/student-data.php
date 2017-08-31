@@ -88,8 +88,8 @@
 					      <th scope="row">All Posts</th>
 					      <td><?php echo sizeof($author['posts']); ?></td>
 					      <td></td>
-					      <td></td>
-					      <td></td>
+<!-- 					      <td></td>
+					      <td></td> -->
 					    </tr>
 					  </tbody>
 					</table>
