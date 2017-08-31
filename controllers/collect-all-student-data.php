@@ -32,7 +32,6 @@
          		$WP_query->the_post(); 
 
          		$author = get_the_author_meta('user_email'); 
-         		var_dump($author); 
 
          		array_push($authors[$author]['posts'], get_the_title() ); 
 
@@ -70,8 +69,5 @@
          }
 
          wp_reset_query(); 
-
-         var_dump($authors); 
-
 
 ?>
