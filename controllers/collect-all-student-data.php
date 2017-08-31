@@ -4,7 +4,7 @@
 	  if (current_user_can('manage_options')){
 	      $args = array(
 	        'blog_id'      => $GLOBALS['blog_id'],
-	        'role'         => 'subscriber',
+	        'role__in' => ['subscriber','contributor'],
 	        'orderby' => 'display_name',
 
 	       ); 
