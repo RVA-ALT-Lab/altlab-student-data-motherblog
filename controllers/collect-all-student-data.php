@@ -29,10 +29,12 @@
          if( $WP_query->have_posts() ){
          	while ( $WP_query->have_posts() ){
 
+         		$WP_query->the_post(); 
+
          		$author = get_the_author_meta('user_email'); 
          		var_dump($author); 
 
-         		$WP_query->the_post(); 
+         		array_push($authors[$author]['posts'], get_post() ); 
 
          		//We need to get the author email so we know where they go in the hash
          		//Then we need to loop through the categories each time through the loop the 
@@ -42,7 +44,25 @@
          		$post_categories = get_the_category(); 
          		
          		foreach($post_categories as $cat){
-         			echo $cat->to_array()['category_nicename']; 
+         			$name = $cat->to_array()['category_nicename']; 
+
+         			switch($name){
+         				case 'dailyart': 
+         					array_push($authors[$author]['dailyArt'], get_post() );
+         					break;
+         				case 'finalproject':
+         					array_push($authors[$author]['finalProject'], get_post() ); 
+         					break;
+         				case 'makingactivity': 
+         					array_push($authors[$author]['makingActivity'], get_post() );
+         					break;
+         				case 'weeklypost': 
+         					array_push($authors[$author]['weeklyPost'], get_post() );
+         					break;			
+
+         			}
+
+
          		} 
 
          	}
@@ -50,6 +70,8 @@
          }
 
          wp_reset_query(); 
+
+         var_dump($authors); 
 
 
 ?>
