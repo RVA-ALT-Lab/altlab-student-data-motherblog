@@ -34,7 +34,7 @@
          		$author = get_the_author_meta('user_email'); 
          		var_dump($author); 
 
-         		array_push($authors[$author]['posts'], get_post() ); 
+         		array_push($authors[$author]['posts'], get_the_title() ); 
 
          		//We need to get the author email so we know where they go in the hash
          		//Then we need to loop through the categories each time through the loop the 
@@ -48,16 +48,16 @@
 
          			switch($name){
          				case 'dailyart': 
-         					array_push($authors[$author]['dailyArt'], get_post() );
+         					array_push($authors[$author]['dailyArt'], get_the_title() );
          					break;
          				case 'finalproject':
-         					array_push($authors[$author]['finalProject'], get_post() ); 
+         					array_push($authors[$author]['finalProject'], get_the_title() ); 
          					break;
          				case 'makingactivity': 
-         					array_push($authors[$author]['makingActivity'], get_post() );
+         					array_push($authors[$author]['makingActivity'], get_the_title() );
          					break;
          				case 'weeklypost': 
-         					array_push($authors[$author]['weeklyPost'], get_post() );
+         					array_push($authors[$author]['weeklyPost'], get_the_title() );
          					break;			
 
          			}

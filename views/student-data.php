@@ -2,7 +2,9 @@
  
 foreach($authors as $author){
 
-	echo '<h2>'. $author['userEmail'].'</h2>';  
+	var_dump($author); 
+
+	echo '<br><br>';  
 
 }
 
