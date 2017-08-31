@@ -2,7 +2,7 @@
 	  $authors = [];
       $args = array(
         'blog_id'      => $GLOBALS['blog_id'],
-        'role'         => 'subscriber',
+        'role'         => 'administrator',
         'orderby' => 'display_name',
 
        ); 
@@ -69,5 +69,7 @@
          }
 
          wp_reset_query(); 
+
+         
 
 ?>
