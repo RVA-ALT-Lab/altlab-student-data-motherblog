@@ -1,22 +1,40 @@
 <?php 
 	  $authors = [];
-      $args = array(
-        'blog_id'      => $GLOBALS['blog_id'],
-        'role'         => 'subscriber',
-        'orderby' => 'display_name',
 
-       ); 
-       $the_users = get_users( $args ); 
-       foreach ( $the_users as $author ) {
-         $authors[$author->user_email] = array(
-            'userEmail' => $author->user_email,
-            'posts' => [],  
-            'dailyArt' => [], 
-            'finalProject' => [], 
-            'makingActivity' => [], 
-            'weeklyPost' => [] 
-          ); 
-       }
+	  if (current_user_can('manage_options')){
+	      $args = array(
+	        'blog_id'      => $GLOBALS['blog_id'],
+	        'role'         => 'subscriber',
+	        'orderby' => 'display_name',
+
+	       ); 
+
+	       $the_users = get_users( $args ); 
+	       foreach ( $the_users as $author ) {
+	         $authors[$author->user_email] = array(
+	            'userEmail' => $author->user_email,
+	            'posts' => [],  
+	            'dailyArt' => [], 
+	            'finalProject' => [], 
+	            'makingActivity' => [], 
+	            'weeklyPost' => [] 
+	          ); 
+	       }
+   	} else {
+
+   		$current_user = wp_get_current_user(); 
+   		$user_email = $current_user->user_email; 
+
+   		$authors[$user_email] = array(
+	            'userEmail' => $user_email,
+	            'posts' => [],  
+	            'dailyArt' => [], 
+	            'finalProject' => [], 
+	            'makingActivity' => [], 
+	            'weeklyPost' => [] 
+	          );
+
+   	}
 
        	$args = array(
             'posts_per_page'   => -1,
