@@ -33,7 +33,7 @@
 
          		$author = get_the_author_meta('user_email'); 
 
-         		array_push($authors[$author]['posts'], the_title() ); 
+         		array_push($authors[$author]['posts'], get_the_title() ); 
 
          		//We need to get the author email so we know where they go in the hash
          		//Then we need to loop through the categories each time through the loop the 
@@ -41,22 +41,27 @@
 
 
          		$post_categories = get_the_category(); 
+
+         		$new_post = array(
+         			'title' => get_the_title(), 
+         			'permalink' => get_the_permalink()
+         			)
          		
          		foreach($post_categories as $cat){
          			$name = $cat->to_array()['category_nicename']; 
 
          			switch($name){
          				case 'dailyart': 
-         					array_push($authors[$author]['dailyArt'], the_title() );
+         					array_push($authors[$author]['dailyArt'], $new_post );
          					break;
          				case 'finalproject':
-         					array_push($authors[$author]['finalProject'], the_title() ); 
+         					array_push($authors[$author]['finalProject'], $new_post ); 
          					break;
          				case 'makingactivity': 
-         					array_push($authors[$author]['makingActivity'], the_title() );
+         					array_push($authors[$author]['makingActivity'], $new_post );
          					break;
          				case 'weeklypost': 
-         					array_push($authors[$author]['weeklyPost'], the_title() );
+         					array_push($authors[$author]['weeklyPost'], $new_post );
          					break;			
 
          			}
