@@ -1,6 +1,4 @@
 <?php 
-
-
 	  $authors = [];
       $args = array(
         'blog_id'      => $GLOBALS['blog_id'],
@@ -15,7 +13,4 @@
 
           ); 
        }
-
-
-
 ?>
