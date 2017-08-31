@@ -1,6 +1,9 @@
 <?php 
+ 
+foreach($authors as $author){
 
-var_dump($_GLOBALS['blog_id']); 
-var_dump($authors); 
+	echo '<h2>'. $author['userEmail'].'</h2>';  
+
+}
 
 ?>
