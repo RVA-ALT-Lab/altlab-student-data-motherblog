@@ -31,8 +31,15 @@
 
          		$WP_query->the_post(); 
 
+         		//We need to get the author email so we know where they go in the hash
+         		//Then we need to loop through the categories each time through the loop the 
+         		//add that post to the right array that stores the different assignment options 
+
+
          		$post_categories = get_the_category(); 
-         		var_dump($post_categories); 
+         		foreach($post_categories as $cat){
+         			echo $cat['category_nicename']; 
+         		} 
 
          	}
 
