@@ -29,6 +29,9 @@
          if( $WP_query->have_posts() ){
          	while ( $WP_query->have_posts() ){
 
+         		$author = get_the_author_meta('user_email'); 
+         		var_dump($author); 
+
          		$WP_query->the_post(); 
 
          		//We need to get the author email so we know where they go in the hash
