@@ -51,7 +51,3 @@ add_action('admin_menu', 'altlab_student_data_motherblog_menu');
 // }
 
 ?>
-
-
-
-
