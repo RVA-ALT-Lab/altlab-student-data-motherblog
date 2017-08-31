@@ -13,7 +13,8 @@ function altlab_student_data_motherblog_menu(){
 		'Student Data', 
 		'manage_options', 
 		'altlab_student_data_motherblog', 
-		'altlab_student_data_motherblog_options_page'
+		'altlab_student_data_motherblog_options_page', 
+		'dashicons-chart-bar'
 		); 
 
 }
@@ -25,7 +26,7 @@ function altlab_student_data_motherblog_options_page(){
 
 	}
 
-	require_once(plugin_dir_path(__FILE__) . '/controllers/collect-student-data.php'); 
+	require_once(plugin_dir_path(__FILE__) . '/controllers/collect-all-student-data.php'); 
 	require_once(plugin_dir_path(__FILE__) . '/views/student-data.php'); 
 }
 
